@@ -2,14 +2,14 @@
 
 namespace Controller;
 use Model\Connect;
-use Model\HomeManager;
+use Model\RecipesManager; 
 
 class HomeController {
 
     public function index() {
-        $homeManager = new HomeManager();/* 
-        $film = $homeManager->getFeaturedFilm(); */
-
+        $recipesManager = new RecipesManager();
+        $recipes = $recipesManager->findAll(); 
+    
         require "view/home.php";
     }
 }
